@@ -18,7 +18,6 @@ gem "html2slim"
 gem "bootstrap"
 gem "bcrypt"
 gem "rails_autolink"
-gem "rspec-rails"
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
@@ -32,4 +31,6 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
+  gem "rspec-rails"
+  gem "factory_bot_rails"
 end
