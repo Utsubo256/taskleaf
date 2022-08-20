@@ -17,6 +17,7 @@ gem "slim-rails"
 gem "html2slim"
 gem "bootstrap"
 gem "bcrypt"
+gem "rails_autolink"
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
