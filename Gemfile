@@ -19,6 +19,7 @@ gem "bootstrap"
 gem "bcrypt"
 gem "rails_autolink"
 gem "ransack"
+gem "kaminari"
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]

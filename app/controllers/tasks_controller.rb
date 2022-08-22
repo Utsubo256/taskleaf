@@ -3,7 +3,7 @@ class TasksController < ApplicationController
 
   def index
     @q = current_user.tasks.ransack(params[:q])
-    @tasks = @q.result(distinct: true)
+    @tasks = @q.result(distinct: true).page(params[:page]).per(30)
   end
 
   def show
@@ -27,7 +27,7 @@ class TasksController < ApplicationController
     end
     
     if @task.save
-      puts true
+      TaskMailer.creation_email(@task).deliver_now
       redirect_to @task, status: :see_other, notice: "タスク「#{@task.name}」を登録しました。"
     else
       render :new, status: :unprocessable_entity
